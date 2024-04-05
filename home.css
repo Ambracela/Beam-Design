@@ -1,0 +1,129 @@
+/* Background color and font settings */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and navigation styling */
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #333;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('hero-bg.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+/* About section */
+.about {
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
+.about h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Feature section */
+.features {
+  background-color: #f7f7f7;
+  padding: 80px 20px;
+}
+
+.features h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.features .feature {
+  text-align: center;
+}
+
+.features .feature img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.features .feature h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.features .feature p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer p {
+  margin: 0;
+}
