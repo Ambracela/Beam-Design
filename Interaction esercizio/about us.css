@@ -1,5 +1,7 @@
+/* Resetting default browser styles */
+/* Background color and font settings */
 body {
-  font-family: 'Roboto', sans-serif; /* Replace with appropriate font */
+  font-family: 'Roboto', sans-serif;
   background-color: #f7f7f7;
   color: #333;
 }
@@ -44,62 +46,61 @@ header nav ul li a:hover {
   color: #333;
 }
 
-/* About section */
-.about {
-  background-color: #fff;
-  padding: 80px 20px;
+nav {
+  padding-right: 20px; /* Add space to the right of the menu */
 }
 
-.about h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  color: #333; /* Adjust as needed */
+nav ul {
+  list-style: none;
+  text-align: right; /* Align menu to the right */
 }
 
-.about p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 40px;
-  color: #666; /* Adjust as needed */
+nav ul li {
+  display: inline;
+  margin-left: 20px; /* Adjust spacing between menu items */
 }
 
-/* Curator profile styling */
-.curator-profile {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+nav ul li:first-child {
+  margin-left: 0; /* Remove margin from first menu item */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* Change color on hover */
+}
+
+main {
   padding: 20px;
-  margin-bottom: 20px;
 }
 
-.curator-profile img {
-  width: 100%;
+section#about {
+  margin-top: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery div {
+  text-align: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
   border-radius: 5px;
-  margin-bottom: 20px;
 }
 
-.curator-profile h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333; /* Adjust as needed */
-}
-
-.curator-profile p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #666; /* Adjust as needed */
-}
-
-/* Footer styling */
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 40px 20px;
-}
-
-footer p {
-  margin: 0;
+  padding: 10px 0;
 }

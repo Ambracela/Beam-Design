@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harry Potter and the Philosopher's Stone</title>
     <link rel="stylesheet" href="harrypotter.css">
-
 <body>
     <header>
         <h1>Harry Potter and the Philosopher's Stone</h1>
@@ -15,7 +14,7 @@
     </header>
 
     <main>
-        <section id="introduction">
+        <section class="moment"  data-src="FOTO/Introduction.jpeg" class="lazy">
             <h2>Introduction</h2>
             <p>
                 "Harry Potter and the Philosopher's Stone" introduces us to the protagonist, Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday.
@@ -23,7 +22,7 @@
             <!-- Add an image illustrating Harry Potter -->
             <img src="FOTO/Introduction.jpeg" alt="Introduction">
         </section>
-    <section class="moment">
+    <section class="moment" data-src="FOTO/The Boy Who Lived.jpeg" class="lazy">
         <h2>1. The Boy Who Lived</h2>
         <p>
             The story begins with the revelation of Harry Potter's unusual upbringing
@@ -33,8 +32,7 @@
         <!-- Add an image illustrating Harry receiving his Hogwarts letter -->
         <img src="FOTO/The Boy Who Lived.jpeg" alt="The Boy Who Lived">
     </section>
-
-    <section class="moment">
+  <section class="moment" data-src="FOTO/The Boy Who Lived.jpeg" class="lazy">
         <h2>2. The Letter from Hogwarts</h2>
         <p>
             Harry receives his acceptance letter to Hogwarts School of Witchcraft
@@ -132,6 +130,47 @@
 
 
     </main>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+        if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        let lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.classList.remove("lazy");
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            });
+
+            lazyImages.forEach(function(lazyImage) {
+                lazyImageObserver.observe(lazyImage);
+            });
+        } else {
+            // Fallback per browser che non supportano IntersectionObserver
+            var lazyLoad = function() {
+                lazyImages.forEach(function(lazyImage) {
+                    if (lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0 && getComputedStyle(lazyImage).display !== "none") {
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.classList.remove("lazy");
+                    }
+                });
+                if (lazyImages.length === 0) {
+                    document.removeEventListener("scroll", lazyLoad);
+                    window.removeEventListener("resize", lazyLoad);
+                    window.removeEventListener("orientationchange", lazyLoad);
+                }
+            };
+
+            document.addEventListener("scroll", lazyLoad);
+            window.addEventListener("resize", lazyLoad);
+            window.addEventListener("orientationchange", lazyLoad);
+        }
+    });
+    </script>
 
     <footer>
         <p>&copy; 2024 Harry Potter Fan Club</p>

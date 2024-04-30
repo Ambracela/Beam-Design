@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eee; /* Light gray background */
+    background-color: #eee;
 }
 
 header {
-    background-color: #740001; /* Gryffindor red */
-    color: #ffd700; /* Gryffindor gold */
+    background-color: #740001;
+    color: #ffd700;
     padding: 20px;
     text-align: center;
 }
@@ -19,6 +19,7 @@ header h1 {
 nav {
     /* Add styling for navigation links if needed */
 }
+
 
 main {
     padding: 20px;
@@ -46,9 +47,14 @@ img {
     margin: 0 auto 20px; /* Center images with some bottom margin */
 }
 
+img.lazy {
+    opacity: 0; /* Nasconde l'immagine inizialmente */
+    transition: opacity 0.3s ease-in-out; /* Aggiungi un'animazione di transizione per rendere il caricamento delle immagini più fluido */
+}
+
+
 footer {
-    background-color: #740001; /* Gryffindor red */
-    color: #ffd700; /* Gryffindor gold */
+    background-color: #FFFF; /* Gryffindor red */
     text-align: center;
     padding: 10px 0;
 }
