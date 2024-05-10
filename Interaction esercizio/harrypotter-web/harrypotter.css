@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+
+header {
+    background-color: #740001;
+    color: #ffd700;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    /* Add styling for navigation links if needed */
+}
+
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+
+}
+
+h2 {
+    color: #740001; /* Gryffindor red */
+    text-align: center;
+}
+
+p {
+    color: #333; /* Dark text color */
+    text-align: center;
+}
+
+img {
+    max-width: 40%;
+    height: auto;
+    display: block; /* Ensure images don't create inline layout issues */
+    margin: 0 auto 20px; /* Center images with some bottom margin */
+}
+
+img.lazy {
+    opacity: 0; /* Nasconde l'immagine inizialmente */
+    transition: opacity 0.3s ease-in-out; /* Aggiungi un'animazione di transizione per rendere il caricamento delle immagini più fluido */
+}
+
+
+footer {
+    background-color: #FFFF; /* Gryffindor red */
+    text-align: center;
+    padding: 10px 0;
+}
